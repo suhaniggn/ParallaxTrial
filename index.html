@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Website</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Suhani :)</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li> 
+                <li><a href="#">Work</a></li> 
+                <li><a href="#">Contact</a></li>   
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <a href="#sec" id="btn">Explore</a>
+            <h2 id="text">Parallax Scrolling</h2>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Parallax Scrolling Effects (Trial)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisl arcu, aliquet non ultricies quis, 
+                pretium vel eros. Phasellus tincidunt pellentesque erat ac scelerisque. Phasellus id tellus diam. 
+                Fusce volutpat tellus nec nulla efficitur, in fermentum nunc viverra. Quisque sed nulla augue. 
+                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer bibendum, 
+                turpis placerat sollicitudin tempor, quam augue vehicula neque, a pretium ante metus id arcu. Suspendisse 
+                id imperdiet tellus.<br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisl arcu, aliquet non ultricies quis, 
+                pretium vel eros. Phasellus tincidunt pellentesque erat ac scelerisque. Phasellus id tellus diam. 
+                Fusce volutpat tellus nec nulla efficitur, in fermentum nunc viverra. Quisque sed nulla augue. 
+                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer bibendum, 
+                turpis placerat sollicitudin tempor, quam augue vehicula neque, a pretium ante metus id arcu. Suspendisse 
+                id imperdiet tellus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisl arcu, aliquet non ultricies quis, 
+                pretium vel eros. Phasellus tincidunt pellentesque erat ac scelerisque. Phasellus id tellus diam. 
+                Fusce volutpat tellus nec nulla efficitur, in fermentum nunc viverra. Quisque sed nulla augue. 
+                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer bibendum, 
+                turpis placerat sollicitudin tempor, quam augue vehicula neque, a pretium ante metus id arcu. Suspendisse 
+                id imperdiet tellus.<br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisl arcu, aliquet non ultricies quis, 
+                pretium vel eros. Phasellus tincidunt pellentesque erat ac scelerisque. Phasellus id tellus diam. 
+                Fusce volutpat tellus nec nulla efficitur, in fermentum nunc viverra.
+                </p>
+        </div>
+        <div class="credits">
+            <h2>Credits</h2>
+            
+            <div class="yt">
+                <a href="https://www.youtube.com/watch?v=1wfeqDyMUx4" target="_blank">@onlinetutorials on youtube</a>
+            </div>
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mount_b = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mount_f = document.getElementById('mountains_front');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mount_b.style.top = value *0.5 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
